@@ -11,7 +11,7 @@ class Habit(models.Model):
         ("hours", "часы"),
         ("days", "дни"),
     ]
-    name = models.CharField(max_length=100, verbose_name='название привыяки')
+    name = models.CharField(max_length=100, verbose_name='название привыяки', **NULLABLE)
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,

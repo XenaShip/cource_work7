@@ -11,7 +11,7 @@ class HabitTestCase(APITestCase):
         self.user = User.objects.create(email="test@gmail.com")
         self.habit = Habit.objects.create(
             place="парк",
-            time="2024-08-24T08:00:00",
+            time="08:00:00",
             action="приседания",
             is_nice_habit=False,
             frequency_number=1,
@@ -34,9 +34,9 @@ class HabitTestCase(APITestCase):
         url = reverse("habits:habits-list")
         data = {
             "place": "дом",
-            "time": "2024-07-24T20:40:00",
+            "time": "20:40:00",
             "action": "протереть пыль",
-            "is_nice_habit": False,
+            "is_pleasant": False,
             "frequency_number": 1,
             "frequency_unit": "days",
             "reward": "посмотреть фильм",
